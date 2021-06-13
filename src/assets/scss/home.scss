@@ -1,0 +1,302 @@
+$primary : #094183;
+$secondary: #FF0000;
+$accent: #000;
+$white: #ffff;
+$h1: 54px;
+$h2: 30px;
+$p: 18px;
+$btn: 27px;
+
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+    line-height: 1.2;
+}
+
+h1{
+    font-size: $h1;
+}
+h2{
+    font-size: $h2;
+}
+p{
+    font-size: $p;
+    line-height: 1.4;
+}
+
+.container {
+    width: 100%;
+    max-width: 1140px;
+    margin: 0 auto;
+}
+
+.uni-btn {
+    margin-top: 10px;
+    background: $primary;
+    font-size: 27px;
+    padding:9px 23px;
+    width: 185px;
+}
+
+.uni-btn a{
+    color:$white;
+    text-decoration: none;
+
+}
+.section-padding{
+    padding:100px 0;
+}
+.header {
+    background-color: $primary;
+    color: $white;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+}
+.header .menu ul{
+    display: inline-flex;
+    align-items: center;
+    gap: 15px;
+}
+.header .menu li{
+    list-style: none;
+}
+
+.header .menu li a{
+    color:$white;
+    text-decoration: none;
+}
+.header .menu li a:hover{
+    color:$secondary;
+
+}
+
+.header .menu li:last-child img{
+    width: 15px;
+}
+
+.mobile-menu {
+    display: none;
+}
+
+a.router-link-exact-active.router-link-active {
+    color:$secondary !important;
+}
+
+.hero {
+    background: url('~@/assets/images/hero.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+    height: 600px;
+    color:$white;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    text-align: left;
+}
+
+.heading {
+    text-align: left;
+    margin: 30px 0;
+    color:$primary;
+}
+
+.curriculum-cards {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    align-items: center;
+}
+
+.head h1 {
+    font-size: 30px;
+}
+
+.head {
+    background: $white;
+    box-shadow: 0px 3px 10px #0000001a;
+    border-left: 4px solid red;
+    text-align: center;
+}
+
+.card p {
+    color: $white;
+}
+
+.card .card-body{
+    background: $primary;
+    margin: 0 3px;
+    padding: 60px 73px;
+}
+
+
+.card:nth-child(2) .head {
+    border-left: 4px solid $accent;
+}
+
+.card:nth-child(3) .head {
+    border-left: 4px solid $primary;
+}
+
+.card:nth-child(2) .card-body{
+    background: $secondary;
+}
+
+.card:nth-child(3) .card-body{
+    background: $accent;
+}
+
+.card .uni-btn {
+    background:$white;
+}
+
+.card .uni-btn a {
+    color: #000;
+}
+
+.icon-list {
+    margin:20px 0px;
+    display: inline-flex;
+    flex-direction: column;
+}
+.icon {
+    display: inline-flex;
+    justify-content: flex-start;
+    gap: 20px;
+    align-items: center;
+    margin-bottom: 4px;
+}
+.icon img{
+    width: 20px;
+}
+
+.about {
+    display: flex;
+    gap: 100px;
+}
+
+.top-img img {
+    width: 100%;
+    max-width: 100%;
+}
+
+.banner-heading h2 {
+    font-size: 30px;
+    text-align: center;
+    border: 2px solid;
+    border-radius: 4px;
+}
+
+
+.about-banner {
+    background: #094183;
+    color: #fff;
+}
+
+.about-banner {
+    background: #094183;
+    color: #fff;
+}
+
+.banner-content {
+    padding: 20px 20px;
+    text-align: center;
+}
+
+.banner-content p {
+    margin-top: 20px;
+}
+
+.footer {
+    display: flex;
+    justify-content: space-around;
+    background: #094183;
+    align-items: center;
+    color: #fff;
+    min-height: 250px;
+}
+
+
+ul.footer-menu-items li {
+    list-style: none;
+}
+
+.social-icons {
+    display: flex;
+    justify-content: flex-start;
+    gap: 30px;
+    margin: 10px 0px;
+}
+
+
+.social-icons img {width: 30px;}
+
+// Resosive breakpoints
+
+@media(max-width:900px) {
+    .menu{
+        display: none;
+    }
+    .mobile-menu {
+        display: inline-block;
+    }
+    h1{
+        font-size: $h1 - 10;
+    }
+    h2{
+        font-size: $h2 - 10;
+    }
+    p{
+        font-size: $p;
+        line-height: 1.4;
+    }
+
+    .hero{
+        padding:40px;
+        height: 450px;
+    }
+    .section-padding {
+        padding: 0px 0;
+    }
+    .curriculum{
+        padding:40px;
+    }
+    .curriculum-cards {
+        display: flex;
+        gap: 20px;
+        justify-content: center;
+        align-items: center;
+        flex-wrap: wrap;
+    }
+
+    .about {
+        display: flex;
+        gap: 100px;
+        flex-wrap: wrap;
+        padding: 40px;
+    }
+
+    .footer {
+        display: flex;
+        background: #094183;
+        color: #fff;
+        min-height: 250px;
+        flex-wrap: wrap;
+        flex-direction: column;
+        gap: 20px;
+        padding: 40px;
+        align-items: center;
+        text-align: center;
+    }
+
+    .social-icons {
+        display: flex;
+        justify-content: center;
+        gap: 30px;
+        margin: 10px 0px;
+    }
+}
